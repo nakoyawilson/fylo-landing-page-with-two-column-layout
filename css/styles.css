@@ -9,11 +9,163 @@
   --cyan: hsl(170, 45%, 43%);
   --grayish-blue: hsl(240, 75%, 98%);
   --gray: hsl(0, 0%, 75%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* General Styles */
+
 body {
   font-family: var(--font-primary);
+  color: var(--dark-blue);
+  line-height: 1.5;
+}
+
+.container {
+  width: 80rem;
+  margin-inline: auto;
+}
+
+img,
+svg {
+  display: block;
+}
+
+/* Header Section */
+
+.header {
+  margin-top: 4rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--dark-blue);
+  font-family: var(--font-secondary);
+  letter-spacing: 0.025em;
+  text-decoration: none;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  margin-top: 5.5rem;
+}
+
+.hero > * {
+  flex: 1;
+}
+
+.main-heading {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 4.75rem;
+}
+
+.hero .paragraph {
+  margin: 1rem 0 1.5rem;
+  padding-right: 3rem;
+  line-height: 1.35;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.email-input {
+  border: 1px solid var(--dark-blue);
+  border-radius: 3px;
+  outline: none;
+  padding: 0.9rem 1.25rem 0.5rem;
+  font: inherit;
+  font-size: 0.9rem;
+  width: 20rem;
+}
+
+::placeholder {
+  color: var(--gray);
+  opacity: 1;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: var(--bright-blue);
+  color: var(--white);
+  width: 12.5rem;
+  padding: 0.95rem;
+  font-size: 0.9rem;
+  box-shadow: 0.1rem 0.05rem 1rem var(--gray);
+}
+
+.illustration {
+  width: 100%;
+}
+
+/* Main Section */
+
+.productive {
+  background-color: var(--grayish-blue);
+  margin-top: 17.5rem;
+  position: relative;
+}
+
+.productive::after {
+  content: "";
+  background-image: url("../images/bg-curve-desktop.svg");
+  background-size: 100% 114px;
+  width: 100%;
+  height: 114px;
+  position: absolute;
+  top: -114px;
+  right: 0;
+}
+
+.productive .container {
+  display: flex;
+}
+
+.call-to-action {
+  background-color: var(--desaturated-blue);
+  color: var(--white);
 }
 
 /* Footer Section */
